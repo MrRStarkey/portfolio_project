@@ -17,7 +17,7 @@ var pTagArray = [];
 
 
 var textArray = [
-    "sudo apt-get install newhire       ",
+    "sudo apt-get install developer     ",
     "                                   ", 
     "loading image files................",
     "loading script files...............",
@@ -31,8 +31,8 @@ var textArray = [
 
 //typing speed
 
-var speedForward = 20,
-    speedBetweenLines = 400;
+var speedForward = 10,
+    speedBetweenLines = 300;
 
 function hidePreloader() {
     preloader.style.display = "none";
@@ -64,7 +64,7 @@ function mainContentFadeIn() {
         } else {
           clearInterval(fadeInEffect);
         }
-    }, 300);
+    }, 200);
 
 }
 
