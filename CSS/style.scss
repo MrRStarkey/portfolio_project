@@ -1,0 +1,199 @@
+//-------------Element Styling
+
+body {
+    margin: 0px;
+    background-color: rgba(51,51,51,0);
+}
+
+//--------------ID Styling
+
+#welcome-section, #projects, #contact-section {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+//--------------Class Styling
+
+.card {
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: rgba(51,51,51,0.95);
+    box-shadow: 5px 5px 10px white;
+    margin: auto;
+    padding: 5%;
+    max-width: 80%;
+    h1 {
+        font-weight: bolder;
+        font-size: 5rem;
+    }
+}
+
+.content-wrapper {
+    
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #333;
+    background-image: url("/images/R-logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 40%;
+    z-index: 1;
+}
+
+.navbar {
+    position: fixed;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.navlinks {
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+    z-index: 10;
+}
+
+.navlinks a{
+    
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+    color: white;
+    }
+
+.link {
+    background-color: rgba($color: #000000, $alpha: 0.0);
+    padding: 4%;
+}
+
+.link:hover {
+    transform: scale(1.25);
+    a {
+        color: lightgrey;
+    } 
+}
+
+.output {
+    text-align: left;
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+    p {
+        margin: 0px;
+        font-size: 20px;
+    }
+}
+
+.preloader {
+    margin: 0px;
+    background-color: #333;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    //transition: opacity 0.2s linear;
+    z-index: 100;
+    opacity: 1;
+    //transform: opacity 1s linear;
+}
+
+
+
+
+.project-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 30%;
+    margin: auto;
+    img {
+        
+        width: 100%;
+        height: auto;
+    }
+    h2 {
+        color: #000;
+        font-size: medium;
+    }
+}
+
+.projects-container {
+    
+    border-radius: 8px;
+    background-color: #333;
+    box-shadow: 5px 5px 10px white;
+
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+    padding: 2%;
+    margin-top: 3%;
+
+}
+
+.sidebar {
+    position: fixed;
+    width: 8%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    .socials, .logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        a, img {
+                width: 70%;
+                height: auto;
+                padding-top: 8%;
+                padding-bottom: 8%;
+            }
+        }
+        .socials {
+            margin: auto;
+        }
+    }
+    
+
+
+.cursor::after {
+    content: "";
+    display: inline-block;
+    margin-left: 0px;
+    background-color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+
+p.cursor::after {
+    height: 13px;
+    width: 6px;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    
+}
