@@ -1,9 +1,32 @@
+@media (min-aspect-ratio: 20/9) {
+  .project-tile p, .project-tile img {
+    display: none;
+  }
+  .card {
+    padding: 0px;
+  }
+  .card h1, .card h2 {
+    font-size: 0em;
+  }
+  .card p {
+    font-size: 0.65rem;
+  }
+}
+@media (min-aspect-ratio: 2/1) {
+  .project-tile img {
+    display: none;
+  }
+}
 body {
-  margin: 0px;
+  margin: 0;
   background-color: rgba(51, 51, 51, 0);
 }
 
-#welcome-section, #projects, #contact-section {
+p {
+  font-size: 12px;
+}
+
+#welcome-section, #project-section, #contact-section, #aboutMe-section {
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -21,10 +44,15 @@ body {
   margin: auto;
   padding: 5%;
   max-width: 80%;
+  max-height: 80%;
 }
 .card h1 {
   font-weight: bolder;
-  font-size: 5rem;
+  font-size: 4rem;
+}
+.card h2 {
+  font-weight: bolder;
+  font-size: 2rem;
 }
 
 .content-wrapper {
@@ -39,7 +67,6 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-size: 40%;
-  z-index: 1;
 }
 
 .navbar {
@@ -49,6 +76,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  z-index: 1;
 }
 
 .navlinks {
@@ -56,7 +84,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  z-index: 10;
+  z-index: 2;
 }
 
 .navlinks a {
@@ -102,17 +130,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
   width: 30%;
+  max-height: 100%;
   margin: auto;
+  text-decoration: none;
+  color: white;
 }
 .project-tile img {
   width: 100%;
   height: auto;
 }
 .project-tile h2 {
-  color: #000;
   font-size: medium;
+  text-align: center;
 }
 
 .projects-container {
@@ -121,8 +151,7 @@ body {
   box-shadow: 5px 5px 10px white;
   display: flex;
   flex-direction: row;
-  width: 65%;
-  padding: 2%;
+  max-height: 80%;
   margin-top: 3%;
 }
 
@@ -132,6 +161,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  z-index: 2;
 }
 .sidebar .socials, .sidebar .logo {
   display: flex;
