@@ -1,5 +1,5 @@
-@media (min-aspect-ratio: 20/9) {
-  .project-tile p, .project-tile img {
+@media (min-aspect-ratio: 18/9) {
+  .project-tile p {
     display: none;
   }
   .card {
@@ -12,14 +12,37 @@
     font-size: 0.65rem;
   }
 }
-@media (min-aspect-ratio: 2/1) {
+@media only screen and (max-hieght: 250px) {
+  .card {
+    overflow: hidden;
+  }
+}
+@media only screen and (max-height: 355px) and (min-aspect-ratio: 20/9) {
+  .card {
+    margin: none;
+    overflow: hidden;
+  }
   .project-tile img {
+    display: none;
+  }
+}
+@media only screen and (max-height: 400px) {
+  .project-tile p {
     display: none;
   }
 }
 body {
   margin: 0;
   background-color: rgba(51, 51, 51, 0);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: darkgrey;
 }
 
 p {
@@ -137,10 +160,11 @@ p {
   color: white;
 }
 .project-tile img {
-  width: 100%;
+  width: 80%;
   height: auto;
 }
 .project-tile h2 {
+  height: 2rem;
   font-size: medium;
   text-align: center;
 }
@@ -151,8 +175,8 @@ p {
   box-shadow: 5px 5px 10px white;
   display: flex;
   flex-direction: row;
-  max-height: 80%;
-  margin-top: 3%;
+  max-height: 90%;
+  padding: 2%;
 }
 
 .sidebar {
